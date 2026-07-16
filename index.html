@@ -1,52 +1,1224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GepardX (GPDX)</title>
 
-    <meta name="description" content="Official website of GepardX (GPDX) on BNB Chain.">
-    <meta name="theme-color" content="#000000">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>GepardX | GPDX</title>
+
+<meta name="description" content="GepardX — Next Generation Community Token">
+<meta name="theme-color" content="#0b0b0b">
+
+<link rel="icon" href="assets/logo.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<div id="particles-js"></div>
+
+<div id="loader">
+
+<img src="assets/logo.jpg" alt="GepardX Logo">
+
+<h2>GepardX</h2>
+
+</div>
+
 <header class="header">
-    <div class="logo">
-        <img src="assets/logo.png" alt="GepardX Logo">
-        <span>GepardX</span>
-    </div>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#faq">FAQ</a>
-    </nav>
+<div class="container header-container">
 
-    <button class="wallet-btn">
-        Connect Wallet
-    </button>
+<a href="#" class="logo">
+
+<img src="assets/logo.jpg" alt="GepardX">
+
+<span>GepardX</span>
+
+</a>
+
+<nav id="nav">
+
+<a href="#about" data-i18n="about">About</a>
+
+<a href="#tokenomics" data-i18n="tokenomics">Tokenomics</a>
+
+<a href="#roadmap" data-i18n="roadmap">Roadmap</a>
+
+<a href="#faq" data-i18n="faq">FAQ</a>
+
+<a href="#community">Community</a>
+
+</nav>
+
+<div class="header-actions">
+
+<div class="language">
+
+<button onclick="setLang('en')">EN</button>
+
+<button onclick="setLang('ru')">RU</button>
+
+</div>
+
+<button id="walletBtn" class="wallet-btn" data-i18n="wallet">
+
+Connect Wallet
+
+</button>
+
+<button id="menuBtn" class="menu-btn">
+
+☰
+
+</button>
+
+</div>
+
+</div>
+
 </header>
+
+<main>
 
 <section class="hero">
 
-    <h1>GepardX (GPDX)</h1>
+<div class="container hero-grid">
 
-    <p>
-        Speed • Security • Innovation
-    </p>
+<div class="hero-left">
 
-    <div class="buttons">
-        <button>Buy GPDX</button>
-        <button>Whitepaper</button>
-    </div>
+<span class="badge">
+
+BNB Chain • BEP-20
+
+</span>
+
+<h1>GepardX</h1>
+
+<p data-i18n="hero">
+
+The Next Generation Community Token
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://pancakeswap.finance/swap?outputCurrency=0x924f9aE5a62a3adc7d91021bBb161FEd89294F6d&chainId=56&chain=bsc&inputCurrency=BNB"
+target="_blank"
+class="buy-btn">
+
+Buy GPDX
+
+</a>
+
+<a href="https://t.me/GepardXOfficial"
+target="_blank"
+class="social-btn">
+
+Telegram
+
+</a>
+
+<a href="https://x.com/GPDXToken"
+target="_blank"
+class="social-btn">
+
+X
+
+</a>
+
+</div>
+
+<div class="hero-stats">
+
+<div>
+
+<h3 class="counter" data-target="1000000000">
+
+0
+
+</h3>
+
+<p>Total Supply</p>
+
+</div>
+
+<div>
+
+<h3 class="counter" data-target="10000">
+
+0
+
+</h3>
+
+<p>Community</p>
+
+</div>
+
+<div>
+
+<h3 class="counter" data-target="100">
+
+0
+
+</h3>
+
+<p>Countries</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="logo-ring">
+
+<img src="assets/logo.jpg"
+class="hero-logo"
+alt="GepardX">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section id="about" class="why">
+
+<div class="container">
+
+<h2 data-i18n="why">
+
+Why GepardX?
+
+</h2>
+
+<div class="why-grid">
+
+<div class="glass-card">
+
+<div class="icon">⚡</div>
+
+<h3>Fast</h3>
+
+<p>
+
+Ultra-fast transactions powered by BNB Chain.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<div class="icon">🔒</div>
+
+<h3>Secure</h3>
+
+<p>
+
+Transparent smart contract built for long-term growth.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<div class="icon">🌍</div>
+
+<h3>Global</h3>
+
+<p>
+
+Building a worldwide crypto community without borders.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<script src="script.js"></script>
+
+
+<section class="countdown">
+
+<div class="container">
+
+<h2>Launch Countdown</h2>
+
+<div id="timer">
+
+<div class="time-box">
+
+<span id="days">00</span>
+
+<p>Days</p>
+
+</div>
+
+<div class="time-box">
+
+<span id="hours">00</span>
+
+<p>Hours</p>
+
+</div>
+
+<div class="time-box">
+
+<span id="minutes">00</span>
+
+<p>Minutes</p>
+
+</div>
+
+<div class="time-box">
+
+<span id="seconds">00</span>
+
+<p>Seconds</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="progress-section">
+
+<div class="container">
+
+<h2>Project Status</h2>
+
+<div class="launch-status">
+
+<div class="status-item">
+
+<span>01</span>
+
+<h3>Smart Contract</h3>
+
+<p>Completed ✅</p>
+
+</div>
+
+<div class="status-item">
+
+<span>02</span>
+
+<h3>Website</h3>
+
+<p>Development</p>
+
+</div>
+
+<div class="status-item">
+
+<span>03</span>
+
+<h3>Community</h3>
+
+<p>Growing</p>
+
+</div>
+
+<div class="status-item">
+
+<span>04</span>
+
+<h3>DEX Listing</h3>
+
+<p>Active</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="ecosystem">
+
+<div class="container">
+
+<h2>Ecosystem</h2>
+
+<div class="ecosystem-grid">
+
+<div class="glass-card">
+
+<h3>BNB Chain</h3>
+
+<p>
+
+Secure BEP-20 blockchain.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h3>PancakeSwap</h3>
+
+<p>
+
+Trade GPDX instantly.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h3>DexScreener</h3>
+
+<p>
+
+Real-time chart tracking.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h3>Community</h3>
+
+<p>
+
+Telegram & X powered ecosystem.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="security">
+
+<div class="container">
+
+<h2>Security & Trust</h2>
+
+<div class="security-grid">
+
+<div class="glass-card">
+
+<h3>🛡 Smart Contract</h3>
+
+<p>
+
+Official BEP-20 contract deployed on BNB Chain.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h3>🔐 Liquidity</h3>
+
+<p>
+
+Designed for transparent and sustainable trading.
+
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h3>🌐 Community</h3>
+
+<p>
+
+Open development with a long-term vision.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- TOKENOMICS -->
+
+<section id="tokenomics" class="tokenomics">
+
+<div class="container">
+
+<h2>Tokenomics</h2>
+
+<div class="tokenomics-wrapper">
+
+<div class="chart-box">
+
+<canvas id="tokenChart"></canvas>
+
+</div>
+
+<div class="token-info">
+
+<div class="token-card">
+
+<h3>1,000,000,000</h3>
+
+<p>Total Supply</p>
+
+</div>
+
+<div class="token-card">
+
+<h3>BNB Chain</h3>
+
+<p>Network</p>
+
+</div>
+
+<div class="token-card">
+
+<h3>0%</h3>
+
+<p>Buy / Sell Tax</p>
+
+</div>
+
+<div class="token-card">
+
+<h3>GPDX</h3>
+
+<p>Token Symbol</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- HOW TO BUY -->
+
+<section class="how-buy">
+
+<div class="container">
+
+<h2>How to Buy</h2>
+
+<p class="section-subtitle">
+
+Buy GPDX in just four simple steps.
+
+</p>
+
+<div class="buy-grid">
+
+<div class="buy-card">
+
+<div class="buy-number">01</div>
+
+<h3>Create Wallet</h3>
+
+<p>
+
+Download MetaMask or Trust Wallet.
+
+</p>
+
+</div>
+
+<div class="buy-card">
+
+<div class="buy-number">02</div>
+
+<h3>Get BNB</h3>
+
+<p>
+
+Buy BNB and send it to your wallet.
+
+</p>
+
+</div>
+
+<div class="buy-card">
+
+<div class="buy-number">03</div>
+
+<h3>Connect</h3>
+
+<p>
+
+Open PancakeSwap and connect your wallet.
+
+</p>
+
+</div>
+
+<div class="buy-card">
+
+<div class="buy-number">04</div>
+
+<h3>Swap</h3>
+
+<p>
+
+Swap BNB for GPDX using the official token contract.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TOKEN DISTRIBUTION -->
+
+<section class="distribution">
+
+<div class="container">
+
+<h2>Token Distribution</h2>
+
+<p class="section-subtitle">
+
+Transparent allocation for sustainable ecosystem growth.
+
+</p>
+
+<div class="distribution-grid">
+
+<div class="distribution-card">
+
+<h3>40%</h3>
+
+<p>Liquidity</p>
+
+</div>
+
+<div class="distribution-card">
+
+<h3>25%</h3>
+
+<p>Community</p>
+
+</div>
+
+<div class="distribution-card">
+
+<h3>15%</h3>
+
+<p>Marketing</p>
+
+</div>
+
+<div class="distribution-card">
+
+<h3>10%</h3>
+
+<p>Development</p>
+
+</div>
+
+<div class="distribution-card">
+
+<h3>10%</h3>
+
+<p>Reserve</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TOKEN UTILITY -->
+
+<section class="utility">
+
+<div class="container">
+
+<h2>Token Utility</h2>
+
+<p class="section-subtitle">
+
+GPDX powers the GepardX ecosystem.
+
+</p>
+
+<div class="utility-grid">
+
+<div class="utility-card">
+
+<div class="utility-icon">⚡</div>
+
+<h3>Fast Transactions</h3>
+
+<p>
+
+Powered by BNB Chain for speed and low fees.
+
+</p>
+
+</div>
+
+<div class="utility-card">
+
+<div class="utility-icon">🔒</div>
+
+<h3>Security</h3>
+
+<p>
+
+Verified smart contract with transparent development.
+
+</p>
+
+</div>
+
+<div class="utility-card">
+
+<div class="utility-icon">🌍</div>
+
+<h3>Community</h3>
+
+<p>
+
+Built for a strong global crypto community.
+
+</p>
+
+</div>
+
+<div class="utility-card">
+
+<div class="utility-icon">🚀</div>
+
+<h3>Future Ecosystem</h3>
+
+<p>
+
+Staking, partnerships and ecosystem expansion.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ABOUT -->
+
+<section class="about">
+
+<div class="container">
+
+<h2>About GepardX</h2>
+
+<p class="about-text">
+
+GepardX (GPDX) is a next-generation BEP-20 community token built on BNB Chain. The project combines blockchain technology, transparency and community-driven growth to create a modern digital ecosystem.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ROADMAP -->
+
+<section id="roadmap" class="roadmap">
+
+<div class="container">
+
+<h2>Roadmap</h2>
+
+
+<div class="roadmap-grid">
+
+
+<div class="road-card">
+
+<span>Phase 1</span>
+
+<h3>Launch</h3>
+
+<p>
+
+Token Creation<br>
+Website Development<br>
+Community Setup
+
+</p>
+
+</div>
+
+
+
+<div class="road-card">
+
+<span>Phase 2</span>
+
+<h3>Growth</h3>
+
+<p>
+
+Marketing<br>
+Partnerships<br>
+DEX Expansion
+
+</p>
+
+</div>
+
+
+
+<div class="road-card">
+
+<span>Phase 3</span>
+
+<h3>Expansion</h3>
+
+<p>
+
+CoinMarketCap<br>
+CoinGecko<br>
+Global Growth
+
+</p>
+
+</div>
+
+
+
+<div class="road-card">
+
+<span>Phase 4</span>
+
+<h3>Ecosystem</h3>
+
+<p>
+
+Utilities<br>
+Staking<br>
+Future Products
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- FAQ -->
+
+<section id="faq" class="faq">
+
+<div class="container">
+
+<h2>Frequently Asked Questions</h2>
+
+
+<div class="faq-grid">
+
+
+<div class="glass-card">
+
+<h3>What is GepardX?</h3>
+
+<p>
+
+GepardX is a BEP-20 community token built on BNB Chain.
+
+</p>
+
+</div>
+
+
+
+<div class="glass-card">
+
+<h3>What is the total supply?</h3>
+
+<p>
+
+The total supply is 1,000,000,000 GPDX.
+
+</p>
+
+</div>
+
+
+
+<div class="glass-card">
+
+<h3>How can I buy GPDX?</h3>
+
+<p>
+
+Connect your wallet and swap BNB for GPDX on PancakeSwap.
+
+</p>
+
+</div>
+
+
+
+<div class="glass-card">
+
+<h3>Which network is used?</h3>
+
+<p>
+
+GepardX uses BNB Chain BEP-20.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- FINAL CTA -->
+
+<section class="final-section">
+
+<div class="final-container">
+
+
+<h2>
+
+Welcome to GepardX
+
+</h2>
+
+
+<p>
+
+The future of digital assets starts here. Join the GepardX ecosystem and become part of the next generation.
+
+</p>
+
+
+
+<div class="final-buttons">
+
+
+<a href="https://pancakeswap.finance/swap?outputCurrency=0x924f9aE5a62a3adc7d91021bBb161FEd89294F6d&chainId=56&chain=bsc&inputCurrency=BNB"
+
+target="_blank"
+
+class="main-btn">
+
+Buy GPDX
+
+</a>
+
+
+
+<a href="https://t.me/GepardXOfficial"
+
+target="_blank"
+
+class="second-btn">
+
+Join Community
+
+</a>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- CONTRACT -->
+
+<section class="contract-section">
+
+<div class="container">
+
+
+<h2>GepardX Contract</h2>
+
+
+<p class="section-subtitle">
+
+Official GPDX token information.
+
+</p>
+
+
+
+<div class="contract-box">
+
+
+<div class="contract-item">
+
+<span>Network</span>
+
+<strong>BNB Chain (BEP-20)</strong>
+
+</div>
+
+
+
+<div class="contract-item">
+
+<span>Token</span>
+
+<strong>GepardX (GPDX)</strong>
+
+</div>
+
+
+
+<div class="contract-item">
+
+<span>Total Supply</span>
+
+<strong>1,000,000,000 GPDX</strong>
+
+</div>
+
+
+
+<div class="contract-item">
+
+<span>Contract</span>
+
+<strong id="contractAddress">
+
+0x924f9aE5a62a3adc7d91021bBb161FEd89294F6d
+
+</strong>
+
+</div>
+
+
+
+<div class="contract-buttons">
+
+
+<button class="copy-btn" onclick="copyContract()">
+
+Copy Address
+
+</button>
+
+
+<a href="https://bscscan.com/token/0x924f9aE5a62a3adc7d91021bBb161FEd89294F6d"
+
+target="_blank"
+
+class="scan-btn">
+
+BscScan
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+
+<div class="footer-brand">
+
+<img src="assets/logo.jpg" alt="GepardX">
+
+<h3>GepardX</h3>
+
+<p>
+
+Next-generation crypto ecosystem powered by innovation.
+
+</p>
+
+</div>
+
+
+
+<div class="footer-links">
+
+<h4>Explore</h4>
+
+<a href="#about">
+
+About
+
+</a>
+
+<a href="#tokenomics">
+
+Tokenomics
+
+</a>
+
+<a href="#roadmap">
+
+Roadmap
+
+</a>
+
+<a href="#faq">
+
+FAQ
+
+</a>
+
+</div>
+
+
+
+<div class="footer-links">
+
+<h4>Community</h4>
+
+<a href="https://x.com/GPDXToken" target="_blank">
+
+X / Twitter
+
+</a>
+
+<a href="https://t.me/GepardXOfficial" target="_blank">
+
+Telegram
+
+</a>
+
+</div>
+
+
+
+<div class="footer-links">
+
+<h4>Resources</h4>
+
+<a href="https://bscscan.com/token/0x924f9aE5a62a3adc7d91021bBb161FEd89294F6d" target="_blank">
+
+BscScan
+
+</a>
+
+<a href="https://dexscreener.com/bsc/0xee09101d660d58cae2c6ae902084211fa0263f46" target="_blank">
+
+DexScreener
+
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 GepardX. All rights reserved.
+
+</p>
+
+</div>
+
+
+</footer>
+
+
+</main>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="script.jt"></script>
+
 
 </body>
+
 </html>

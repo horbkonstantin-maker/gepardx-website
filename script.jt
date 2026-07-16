@@ -1,1 +1,553 @@
+/* =========================
+   LOADER
+========================= */
 
+window.addEventListener("load",()=>{
+
+const loader=document.getElementById("loader");
+
+if(loader){
+
+setTimeout(()=>{
+
+loader.style.opacity="0";
+loader.style.pointerEvents="none";
+
+},800);
+
+}
+
+});
+
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn=document.getElementById("menuBtn");
+const nav=document.getElementById("nav");
+
+
+if(menuBtn && nav){
+
+menuBtn.onclick=()=>{
+
+nav.classList.toggle("active");
+
+};
+
+}
+
+
+
+
+/* =========================
+   WALLET CONNECT
+========================= */
+
+
+const walletBtn=document.getElementById("walletBtn");
+
+
+if(walletBtn){
+
+walletBtn.onclick=async()=>{
+
+
+if(window.ethereum){
+
+try{
+
+
+const accounts=await window.ethereum.request({
+
+method:"eth_requestAccounts"
+
+});
+
+
+const address=accounts[0];
+
+
+walletBtn.innerHTML=
+
+address.slice(0,6)+"..."+address.slice(-4);
+
+
+walletBtn.style.background="#ffd86b";
+
+
+}
+
+catch(err){
+
+console.log(err);
+
+}
+
+
+}
+
+else{
+
+
+alert("Please install MetaMask");
+
+}
+
+
+};
+
+
+}
+
+
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+
+const launchDate=new Date("December 31, 2026 00:00:00").getTime();
+
+
+function updateTimer(){
+
+
+const now=new Date().getTime();
+
+
+const distance=launchDate-now;
+
+
+
+if(distance<0) return;
+
+
+
+const days=Math.floor(distance/(1000*60*60*24));
+
+const hours=Math.floor(
+(distance%(1000*60*60*24))/(1000*60*60)
+);
+
+
+const minutes=Math.floor(
+(distance%(1000*60*60))/(1000*60)
+);
+
+
+const seconds=Math.floor(
+(distance%(1000*60))/1000
+);
+
+
+
+const d=document.getElementById("days");
+const h=document.getElementById("hours");
+const m=document.getElementById("minutes");
+const s=document.getElementById("seconds");
+
+
+if(d)d.innerHTML=days;
+if(h)h.innerHTML=hours;
+if(m)m.innerHTML=minutes;
+if(s)s.innerHTML=seconds;
+
+
+}
+
+
+setInterval(updateTimer,1000);
+
+updateTimer();
+
+
+
+
+/* =========================
+   COUNTERS
+========================= */
+
+
+const counters=document.querySelectorAll(".counter");
+
+
+counters.forEach(counter=>{
+
+
+let started=false;
+
+
+const observer=new IntersectionObserver(entries=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting && !started){
+
+
+started=true;
+
+
+let target=+counter.dataset.target;
+
+
+let count=0;
+
+
+let speed=target/100;
+
+
+
+let timer=setInterval(()=>{
+
+
+count+=speed;
+
+
+if(count>=target){
+
+
+count=target;
+
+clearInterval(timer);
+
+
+}
+
+
+counter.innerHTML=
+
+Math.floor(count).toLocaleString();
+
+
+},20);
+
+
+
+}
+
+
+});
+
+
+});
+
+
+observer.observe(counter);
+
+
+});
+
+
+
+
+/* =========================
+   COPY CONTRACT
+========================= */
+
+
+function copyContract(){
+
+
+const address=document.getElementById("contractAddress");
+
+
+if(address){
+
+
+navigator.clipboard.writeText(address.innerText);
+
+
+alert("Contract copied");
+
+
+}
+
+
+}
+
+
+window.copyContract=copyContract;
+
+
+
+
+/* =========================
+   TRANSLATIONS
+========================= */
+
+
+const translations={
+
+
+en:{
+
+
+about:"About",
+
+tokenomics:"Tokenomics",
+
+roadmap:"Roadmap",
+
+faq:"FAQ",
+
+wallet:"Connect Wallet",
+
+hero:"The Next Generation Community Token",
+
+why:"Why GepardX?"
+
+
+},
+
+
+
+ru:{
+
+
+about:"О проекте",
+
+tokenomics:"Токеномика",
+
+roadmap:"Дорожная карта",
+
+faq:"Вопросы",
+
+wallet:"Подключить кошелёк",
+
+hero:"Токен нового поколения",
+
+why:"Почему GepardX?"
+
+
+}
+
+
+};
+
+
+
+
+function setLang(lang){
+
+
+document.querySelectorAll("[data-i18n]").forEach(el=>{
+
+
+let key=el.dataset.i18n;
+
+
+if(translations[lang][key]){
+
+
+el.innerHTML=translations[lang][key];
+
+
+}
+
+
+});
+
+
+localStorage.setItem("lang",lang);
+
+
+}
+
+
+window.setLang=setLang;
+
+
+
+const savedLang=localStorage.getItem("lang");
+
+
+if(savedLang){
+
+setLang(savedLang);
+
+}
+
+
+
+
+/* =========================
+   PARTICLES
+========================= */
+
+
+if(window.particlesJS){
+
+
+particlesJS("particles-js",{
+
+
+particles:{
+
+
+number:{
+
+value:70
+
+},
+
+
+color:{
+
+value:"#d4af37"
+
+},
+
+
+size:{
+
+value:2
+
+},
+
+
+move:{
+
+speed:1
+
+},
+
+
+line_linked:{
+
+enable:true,
+
+distance:150,
+
+color:"#d4af37",
+
+opacity:.2
+
+}
+
+
+},
+
+
+interactivity:{
+
+
+events:{
+
+
+onhover:{
+
+enable:true,
+
+mode:"repulse"
+
+}
+
+
+}
+
+
+}
+
+
+});
+
+
+}
+
+
+
+
+/* =========================
+   TOKEN CHART
+========================= */
+
+
+const chart=document.getElementById("tokenChart");
+
+
+if(chart && window.Chart){
+
+
+new Chart(chart,{
+
+
+type:"doughnut",
+
+
+data:{
+
+
+labels:[
+
+"Liquidity",
+
+"Community",
+
+"Marketing",
+
+"Ecosystem"
+
+],
+
+
+datasets:[{
+
+
+data:[40,30,20,10],
+
+
+borderWidth:0
+
+
+}]
+
+
+},
+
+
+options:{
+
+
+responsive:true,
+
+
+cutout:"70%",
+
+
+plugins:{
+
+
+legend:{
+
+
+position:"bottom",
+
+
+labels:{
+
+
+color:"#fff"
+
+
+}
+
+
+}
+
+
+}
+
+
+}
+
+
+});
+
+
+}
